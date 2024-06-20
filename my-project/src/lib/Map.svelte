@@ -4,6 +4,13 @@
     import geojson from './Path'; // Remove the .ts extension
 
     let mapContainer: HTMLDivElement | null = null;
+    let getal1: number = 0;
+    let getal2: number = 0;
+
+    function generateRandomNumbers() {
+        getal1 = Math.floor(Math.random() * 1000);
+        getal2 = Math.floor(Math.random() * 1000);
+    }
 
     onMount(() => {
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG9uMTU2IiwiYSI6ImNseDRnY3pxczBkdWQyanF0bm14ZHVvbGkifQ.SU1EtXJUTlEVINngdmWkfA';
@@ -87,6 +94,7 @@
 
                     // Update the marker position
                     marker.setLngLat(end);
+                    generateRandomNumbers(); // Update the numbers when reaching a new point
 
                     step += 1;
                     if (step < coordinates.length - 1) {
@@ -136,10 +144,21 @@
 
 <div bind:this={mapContainer} style="width: 100%; height: 100vh;"></div>
 <a class="absolute top-2 left-2 z-10 bg-accent px-8 py-3 font-bold rounded-xl" href="/KiesJeBoot">terug</a>
+<div class="overlay">
+    <p>Watersnelheid: {getal1}</p>
+    <p>Waterhoogte: {getal2}</p>
+</div>
 
 <style>
-    div {
-        width: 100%;
-        height: 100vh;
+    .overlay {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        font-size: 14px;
+        width: 150px; /* Fixed width for the overlay box */
     }
 </style>
