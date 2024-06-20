@@ -9,30 +9,11 @@
           <div class="text-xl font-bold pt-5 p-5">Contact</div>
         </div>
       </div>
-      <div class="flex justify-center pt-6 text-3xl font-bold">Spell Uitleg</div>
+      <div class="flex justify-center pt-6 text-3xl font-bold">Wat is het doel van het
+        Rijkswaterstaat Experience?</div>
     <div class="flex justify-center">
         <div class="pt-6 w-2/3 flex-wrap text-center text-xl font-bold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          Ons doel is om een oplossing te vinden voor een datavisualisatie die meer context en een duidelijk inzicht bieden in het Nederlandse waterprobleem, die voor de gemiddelde Nederlander zonder specifieke voorkennis makkelijk af te lezen en te begrijpen is. Ons uitgangspunt is het maken van een visualisatie die aantrekkelijk en vernieuwend is, maar ook herkenbaar als datavisualisatie vanuit Rijkswaterstaat.
         </div>
     </div>
     <div class="flex justify-center pt-10">

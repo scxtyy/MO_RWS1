@@ -6,10 +6,12 @@
     let mapContainer: HTMLDivElement | null = null;
     let getal1: number = 0;
     let getal2: number = 0;
+    let getal3: number = 0;
 
     function generateRandomNumbers() {
-        getal1 = Math.floor(Math.random() * 1000);
-        getal2 = Math.floor(Math.random() * 1000);
+        getal1 = Math.floor(Math.random() * 150);
+        getal2 = Math.floor(Math.random() * 2000);
+        getal3 = 4;
     }
 
     onMount(() => {
@@ -145,8 +147,9 @@
 <div bind:this={mapContainer} style="width: 100%; height: 100vh;"></div>
 <a class="absolute top-2 left-2 z-10 bg-accent px-8 py-3 font-bold rounded-xl" href="/KiesJeBoot">terug</a>
 <div class="overlay">
-    <p>Watersnelheid: {getal1}</p>
-    <p>Waterhoogte: {getal2}</p>
+    <p>Afvoer: {getal1} m3/s</p>
+    <p>Waterhoogte: {getal2}cm</p>
+    <p>Windsnelheid: {getal3}bft</p>
 </div>
 
 <style>
@@ -158,7 +161,7 @@
         padding: 10px;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        font-size: 14px;
-        width: 150px; /* Fixed width for the overlay box */
+        font-size: 18px;
+        width: 250px; /* Fixed width for the overlay box */
     }
 </style>
