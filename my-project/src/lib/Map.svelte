@@ -6,20 +6,37 @@
     let mapContainer: HTMLDivElement | null = null;
     let getal1: number = 0; // Afvoer
     let getal2: number = 0; // Waterhoogte
-    let getal3: number = 0; // Windsnelheid
+    let getal3: number = 0; // Watertemperatuur
 
-    // De lijst met getallen voor Waterhoogte
-    const numberList = [
+    // De lijst met getallen voor Waterhoogte, Afvoer en Watertemperatuur
+    const waterhoogteList = [
         4.454, 4.406, 4.394, 3.870, 3.790, 3.601, 3.436, 2.884, 2.724, 2.600,
         2.244, 2.120, 2.096, 1.429, 1.423, 1.408, 1.157, 1.149, 1.120, 1.109,
         0.809, 0.795, 0.785, 0.781, 0.511, 0.496, 0.490
     ];
-    let currentIndex = 0;
+    const afvoerList = [
+        239.04, 132.54, 301.87, 314.99, 388.83
+    ];
+    const watertemperatuurList = [
+        18.5, 18.5, 18.8, 18.6, 18.8, 18.7, 18.8, 18.6, 18.2, 18.6, 
+        18.8, 18.7, 18.8, 18.6, 18.2
+    ];
+    let waterhoogteIndex = 0;
+    let afvoerIndex = 0;
+    let watertemperatuurIndex = 0;
 
     function updateNumbers() {
-        if (currentIndex < numberList.length) {
-            getal2 = numberList[currentIndex]; // Waterhoogte
-            currentIndex++;
+        if (waterhoogteIndex < waterhoogteList.length) {
+            getal2 = waterhoogteList[waterhoogteIndex]; // Waterhoogte
+            waterhoogteIndex++;
+        }
+        if (afvoerIndex < afvoerList.length) {
+            getal1 = afvoerList[afvoerIndex]; // Afvoer
+            afvoerIndex++;
+        }
+        if (watertemperatuurIndex < watertemperatuurList.length) {
+            getal3 = watertemperatuurList[watertemperatuurIndex]; // Watertemperatuur
+            watertemperatuurIndex++;
         }
     }
 
@@ -158,7 +175,7 @@
 <div class="overlay">
     <p>Afvoer: {getal1} m3/s</p>
     <p>Waterhoogte: {getal2} cm</p>
-    <p>Windsnelheid: {getal3} bft</p>
+    <p>Watertemperatuur: {getal3} °C</p>
 </div>
 
 <style>
