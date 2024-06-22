@@ -4,14 +4,23 @@
     import geojson from './Path'; // Remove the .ts extension
 
     let mapContainer: HTMLDivElement | null = null;
-    let getal1: number = 0;
-    let getal2: number = 0;
-    let getal3: number = 0;
+    let getal1: number = 0; // Afvoer
+    let getal2: number = 0; // Waterhoogte
+    let getal3: number = 0; // Windsnelheid
 
-    function generateRandomNumbers() {
-        getal1 = Math.floor(Math.random() * 150);
-        getal2 = Math.floor(Math.random() * 2000);
-        getal3 = 4;
+    // De lijst met getallen voor Waterhoogte
+    const numberList = [
+        4.454, 4.406, 4.394, 3.870, 3.790, 3.601, 3.436, 2.884, 2.724, 2.600,
+        2.244, 2.120, 2.096, 1.429, 1.423, 1.408, 1.157, 1.149, 1.120, 1.109,
+        0.809, 0.795, 0.785, 0.781, 0.511, 0.496, 0.490
+    ];
+    let currentIndex = 0;
+
+    function updateNumbers() {
+        if (currentIndex < numberList.length) {
+            getal2 = numberList[currentIndex]; // Waterhoogte
+            currentIndex++;
+        }
     }
 
     onMount(() => {
@@ -96,7 +105,7 @@
 
                     // Update the marker position
                     marker.setLngLat(end);
-                    generateRandomNumbers(); // Update the numbers when reaching a new point
+                    updateNumbers(); // Update the numbers when reaching a new point
 
                     step += 1;
                     if (step < coordinates.length - 1) {
@@ -148,8 +157,8 @@
 <a class="absolute top-2 left-2 z-10 bg-accent px-8 py-3 font-bold rounded-xl" href="/KiesJeBoot">terug</a>
 <div class="overlay">
     <p>Afvoer: {getal1} m3/s</p>
-    <p>Waterhoogte: {getal2}cm</p>
-    <p>Windsnelheid: {getal3}bft</p>
+    <p>Waterhoogte: {getal2} cm</p>
+    <p>Windsnelheid: {getal3} bft</p>
 </div>
 
 <style>
